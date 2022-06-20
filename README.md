@@ -41,5 +41,5 @@ Basic SED syntax to help manipulate and filter files
 
 
 #### 10
-#### use pipe to combine various functions instead of doing them one after another, e.g.changing to upper case, adding a name to a afster header, 
+#### use pipe to combine various functions, e.g.changing case, adding a name to a fasta header, 
 
