@@ -40,9 +40,6 @@ Basic SED syntax to help manipulate and filter files
 #### To match only lines with beginning with chr/ (i.e. manipulation of specific matching)
 
 
-#### To add P_falciparum at the beginning of each line of a fasta header
-
-
 #### 10
 #### use pipe to combine various functions instead of doing them one after another, e.g.changing to upper case, adding a name to a afster header, 
 
