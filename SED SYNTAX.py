@@ -4,6 +4,7 @@
 #### find and replace a pattern, all matching patterns at the eginning of rows (chr) will be changed to (Chromosome), leaving similar patterns within the body
 sed 's/pattern_to_find/pattern_to_replace/' in_put_file
 sed 's/chr/Chromosome/' anopheles.gff
+ouput printed on screen
 
 
 #### 2 
