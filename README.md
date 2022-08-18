@@ -1,6 +1,12 @@
 # Manipulation-of-files-with-SED-SYNTAX
 Basic SED syntax to help manipulate and filter files
 
+#### while in the terminal get inside the correct folder
+pwd
+cd /home/nattohz/practicals/sed
+#### check files in that folder
+ls -lhr
+#### proceed with the syntax below
 #### 1
 #### find and replace a pattern, all matching patterns at the eginning of rows (chr) will be changed to (Chromosome), leaving similar patterns within the body
 sed 's/pattern_to_find/pattern_to_replace/' in_put_file
