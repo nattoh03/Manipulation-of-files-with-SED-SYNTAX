@@ -10,11 +10,13 @@ ls -lhr
 #### 1
 #### find and replace a pattern, all matching patterns at the eginning of rows (chr) will be changed to (Chromosome), leaving similar patterns within the body
 sed 's/pattern_to_find/pattern_to_replace/' in_put_file
+#
 sed 's/chr/Chromosome/' anopheles.gff
 
 #### 2 
 #### To find and replace a pattern both at the beginnig of row and other parts of th documents, must include a global flag (g)
 sed 's/pattern_to_find/pattern_to_replace/g' in_put_file
+#
 sed 's/chr/Chromosome/g' anopheles.gff
 
 #### 3
@@ -31,7 +33,9 @@ sed -n '1p; 3, 5p; 7, 9p' anopheles.gff
 #### 4
 #### format file from tab-delimited format to comma separated 
 sed 's/\t/,/' anopheles.gff
+#
 but this substitutues only the first character, therefore 
+#
 sed 's/\t/,/g' anopheles.gff 
  
 #### 5
