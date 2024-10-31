@@ -3,35 +3,35 @@ Basic SED syntax to help manipulate and filter files
 
 #### while in the terminal get inside the correct folder
 pwd
-cd /home/nattohz/practicals/sed
+cd /home/nattohz/Anopheles/sed
 #### check files in that folder
 ls -lhr
 #### proceed with the syntax below
 #### 1
-#### find and replace a pattern, all matching patterns at the eginning of rows (chr) will be changed to (Chromosome), leaving similar patterns within the body
+#### find and replace a pattern, all matching patterns at the beginning of rows (chr) will be changed to (Chromosome), leaving similar patterns that may appear within the body
 sed 's/pattern_to_find/pattern_to_replace/' in_put_file
 #
 sed 's/chr/Chromosome/' anopheles.gff
 
 #### 2 
-#### To find and replace a pattern both at the beginnig of row and other parts of th documents, must include a global flag (g)
+#### To find and replace a pattern both at the beginning of the row and other parts of the documents, must include a global flag (g)
 sed 's/pattern_to_find/pattern_to_replace/g' in_put_file
 #
 sed 's/chr/Chromosome/g' anopheles.gff
 
 #### 3
 #### print out specific lines/rows in a file
-#### print the first 3 lines of the  anopheles.gff file
+### print the first 3 lines of the  anopheles.gff file
 sed -n '1, 3p' anopheles.gff
-#### print the first 10 lines of the  anopheles.gff file
+### print the first 10 lines of the  anopheles.gff file
 sed -n '1, 10p' anopheles.gff
-#### print the first 3 lines, then line 5 and 9 of the  anopheles.gff file
+### print the first 3 lines, then line 5 and 9 of the  anopheles.gff file
 sed -n '1, 3p; 5p; 9p' anopheles.gff
-#### print the first line, then lines 3 to 5, followed by lines 7 to 9 of the  anopheles.gff file
+### print the first line, then lines 3 to 5, followed by lines 7 to 9 of the  anopheles.gff file
 sed -n '1p; 3, 5p; 7, 9p' anopheles.gff
 
 #### 4
-#### format file from tab-delimited format to comma separated 
+### format file from tab-delimited format to comma separated 
 sed 's/\t/,/' anopheles.gff
 #
 but this substitutues only the first character, therefore 
@@ -39,7 +39,7 @@ but this substitutues only the first character, therefore
 sed 's/\t/,/g' anopheles.gff 
  
 #### 5
-#### To add a pattern at the beginning of every line
+### To add a pattern at the beginning of every line
 sed 's/^/Organism_/g' anopheles.gff 
 
 #### 6
